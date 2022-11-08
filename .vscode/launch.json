@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "auto",
+            "type": "auto-debug",
+            "request": "launch",
+            "map": {
+                "*.py": "Python: Current File"
+            }
+        },
+        {
             "name": "PowerShell Launch Current File",
             "type": "PowerShell",
             "request": "launch",
@@ -73,19 +81,5 @@
             "localRoot": "${workspaceFolder}",
             "remoteRoot": "Path to the Remote Directory Containing the Program"
         },
-        {
-            "request": "launch",
-            "name": "Launch Program",
-            "type": "pwa-node",
-            "program": "${workspaceFolder}/main.ts",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "deno",
-            "runtimeArgs": [
-                "run",
-                "--inspect",
-                "--allow-all"
-            ],
-            "attachSimplePort": 9229
-        }
     ]
 }
