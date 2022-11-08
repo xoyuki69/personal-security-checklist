@@ -20,6 +20,6 @@ Software or Service Addition / Updating Security Guidelines / Formatting / Spell
 ### Checklist
 > Please complete the following checklist
 
-- [ ] I have performed a self-review (valid markdown formatting, spelling and grammar)
-- [ ] I have indicated whether I have any affiliation with any software/ services added  
-- [ ] I agree to follow the repositories [code of conduct](/.github/CODE_OF_CONDUCT.md)
+- [ +] I have performed a self-review (valid markdown formatting, spelling and grammar)
+- [ +] I have indicated whether I have any affiliation with any software/ services added  
+- [ +] I agree to follow the repositories [code of conduct](/.github/CODE_OF_CONDUCT.md)
