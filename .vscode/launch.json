@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PowerShell Launch Current File",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${file}",
+            "cwd": "${cwd}"
+        },
+        {
+            "name": "PowerShell Attach Interactive Session Runspace",
+            "type": "PowerShell",
+            "request": "attach",
+            "processId": "current"
+        },
+        {
+            "name": "Dart: Run all Tests",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/"
+        },
+        {
+            "name": "Dart: Attach to Process",
+            "type": "dart",
+            "request": "attach"
+        },
+        {
+            "name": "Attach to Kubernetes Pod (NodeJS)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Node",
+            "debugPort": 9229,
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+        {
+            "name": "Attach to Kubernetes Pod (Java)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Java",
+            "debugPort": 50005,
+            "podSelector": {
+                "app": "deployment-name"
+            }
+        },
+        {
+            "name": "Attach to Kubernetes Pod (Go)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Go",
+            "debugPort": 2345,
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+        {
+            "name": "Attach to Kubernetes Pod (.NET Core)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "NETCore",
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+        {
+            "request": "launch",
+            "name": "Launch Program",
+            "type": "pwa-node",
+            "program": "${workspaceFolder}/main.ts",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "deno",
+            "runtimeArgs": [
+                "run",
+                "--inspect",
+                "--allow-all"
+            ],
+            "attachSimplePort": 9229
+        }
+    ]
+}
